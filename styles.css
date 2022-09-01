@@ -6,31 +6,120 @@ font-family: 'Roboto', sans-serif; */
 
 
 body {
- font-family: 'IBM Plex Mono', monospace;
-
+    font-family: 'IBM Plex Mono', monospace;
+    /* background-color: #453333; */
+    background-image: url(./background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.btn {
- font-family: 'IBM Plex Mono', monospace;
-    
-}
 
 .container {
     height: 100vh;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    /* border: 1px solid green; */
+
+}
+.description {
+    text-align:center;
+    margin-bottom: 20px;
+}
+.btn {
+    font-family: 'Roboto', sans-serif;
+
+    color: black;
+    background-color: #00CFBD;
+    border: 0;
+    padding: 20px 30px;
+    margin-top: 20px;
 
 }
 
-.patches {
+.lcd-wrap {
+    width: 50%;
+    /* border: 1px solid yellow; */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .patches {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    /* justify-content: center; */
+    text-align: left;
+
+}
+
+.description {
+    color: white;
+}
+
+.patches {
+    font-size: 1.5rem;
+    color: black;
+    background-color: #b6c9bf;
+    padding: 0px 20px;
+    width: 100%;
+    height: 150px;
+
+
+}
+
+
+
+.lcd {
+    display: flex;
+    background-color: black;
+    padding: 20px;
+    padding-left: 0px;
+    /* width: 80%; */
+
+}
+
+.patch-num {
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    /* border: 1px solid green; */
+    width: 5rem;
     font-size: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .lcd-wrap {
+        width: 90%;
+
+    }
+
+    .patches {
+        font-size: 1.2rem;
+        height: 100px;
+
+
+    }
+
+    .patch-num {
+
+        padding: 0 10px;
+        /* border: 1px solid green; */
+        width: 2rem;
+        font-size: 1rem;
+    }
+
+    .lcd {
+        display: flex;
+        background-color: black;
+        padding: 10px;
+        padding-left: 0px;
+        /* width: 80%; */
+
+    }
 }
