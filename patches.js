@@ -61,10 +61,14 @@ let suffix = [
     'delay',
     'blips',
     'sequence',
+    'bleeps',
+    'bloops',
+    'stab',
     
 ]
 
 let genre = [
+    'Berlin School',
     'atmospheric',
     'acid',
     'techno',
@@ -88,9 +92,17 @@ let genre = [
     'tron',
     'funk',
     'Moroder',
+    'tube',
+    'rave',
+    'boom-bap',
+    'LFO',
 
 ]
 let adjective = [
+    'resonant',
+    'modulated',
+    'ringmod',
+    'distorted',
     'ambient',
     'aggro',
     'modern',
@@ -122,6 +134,8 @@ let adjective = [
     '90s',
     'analog',
     'digital',
+    'wavetable',
+    'granular',
     'FM',
     'sync',
     'metallic',
