@@ -5,6 +5,7 @@ let artist = [
 
 ]
 let instrument = [
+    'vocoder',
     'blues',
     'horns',
     'swell',
@@ -13,7 +14,7 @@ let instrument = [
     'strings',
     'octaves',
     'fifth',
-    'orch',
+    'orchestra',
     'pad',
     'pulse',
     'saw',
@@ -26,7 +27,6 @@ let instrument = [
     'guitar',
     'brass',
     'soundtrack',
-    'atmospheric',
     'drums',
     'noise',
     'sitar',
@@ -65,6 +65,7 @@ let suffix = [
 ]
 
 let genre = [
+    'atmospheric',
     'acid',
     'techno',
     'alien',
@@ -85,15 +86,17 @@ let genre = [
     'S&H',
     'Carpenter',
     'tron',
-    'funk'
+    'funk',
+    'Moroder',
 
 ]
 let adjective = [
-    'moist',
+    'ambient',
     'aggro',
     'modern',
     'sad',
     'big',
+    'chorused',
     'interstellar',
     'cheesy',
     'haunting',
@@ -168,7 +171,6 @@ let adjective = [
     'chime',
     'pure',
     'tortured',
-    'hit',
     'poly',
     'alternative',
     'rocker',
@@ -177,7 +179,7 @@ let adjective = [
     'running',
     'flying',
     'steel',
-
+    'groovy',
 
 
 ]
@@ -210,6 +212,12 @@ function randomPatch() {
     }
 }
 
+function randomNumber() {
+    let num = Math.floor((Math.random() * 99));
+    if (num < 10) {
+        num = '0' + num;
+    } return num;
+}
 
 const randomButton = document.getElementById('randomize');
 
@@ -217,14 +225,22 @@ function updatePatch(newName) {
     const patchName = document.querySelector('.patchtext');
     patchName.textContent = newName
 }
+function updateNumber(newNumber) {
+    const patchNum = document.querySelector('.patchnum');
+    
+    patchNum.textContent = newNumber
+}
+
 
 //set inital patch upon loading page
 updatePatch(randomPatch());
+updateNumber(randomNumber());
 
 
 //give random patch on clicking button
 randomButton.addEventListener('click', function () {
     updatePatch(randomPatch());
+    updateNumber(randomNumber());
 });
 
 

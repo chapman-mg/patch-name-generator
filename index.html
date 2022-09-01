@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,12 +9,23 @@
     <script src="./patches.js" defer></script>
     <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
     <div class="container">
-        <div class="patches">
-            <p class="patchtext"></p>
-            <button id="randomize" class="btn">Random</button>
+        <div class="lcd-wrap">
+            <p class="description">Generate random synth patch names for inspiration</p>
+            <div class="lcd">
+                <div class="patch-num">
+                    <p class="patchnum"></p>
+                </div>
+                <div class="patches">
+                    <p class="patchtext"></p>
+                </div>
+            
+            </div>
+            <button id="randomize" class="btn">RANDOMIZE</button>
         </div>
     </div>
 </body>
+
 </html>
