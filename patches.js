@@ -239,8 +239,13 @@ updateNumber(randomNumber());
 
 //give random patch on clicking button
 randomButton.addEventListener('click', function () {
+    randomButton.classList.add('playing');
     updatePatch(randomPatch());
     updateNumber(randomNumber());
 });
 
-
+function removeTransition(e) {
+    if (e.propertyName !== 'box-shadow') return;
+    e.target.classList.remove('playing');
+  }
+randomButton.addEventListener('transitionend', removeTransition);

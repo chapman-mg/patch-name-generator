@@ -14,6 +14,11 @@ body {
     background-position: center;
 }
 
+.playing {
+    /* transform: scale(1.05); */
+    border-color: #00CFBD;
+    box-shadow: 0 0 1rem #00CFBD;
+  }
 
 .container {
     height: 100vh;
@@ -37,7 +42,7 @@ body {
     border: 0;
     padding: 20px 30px;
     margin-top: 20px;
-
+  transition: all .07s ease;
 }
 
 .lcd-wrap {
