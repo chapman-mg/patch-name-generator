@@ -13,6 +13,9 @@ let artist = [
 
 ]
 let instrument = [
+    '303',
+    'violin',
+    'choir',
     'vocoder',
     'blues',
     'horns',
@@ -55,11 +58,19 @@ let instrument = [
     'glide',
     'legato',
     'dreams',
+    'shakuhachi',
+    'panpipes',
+    'square',
+    'birds',
+    'percussion',
+    'marimba',
 
 ]
 
 let suffix = [
+    'solo',
     'layers',
+    'sweep',
     'stack',
     'split',
     'drone',
@@ -76,6 +87,7 @@ let suffix = [
 ]
 
 let genre = [
+    'filtered',
     'Berlin School',
     'atmospheric',
     'acid',
@@ -107,6 +119,12 @@ let genre = [
 
 ]
 let adjective = [
+    'PCM',
+    'ice',
+    'crystal',
+    'PWM',
+    'slap',
+    'psycho',
     'resonant',
     'modulated',
     'ringmod',
