@@ -4,7 +4,19 @@
 /* font-family: 'IBM Plex Mono', monospace;
 font-family: 'Roboto', sans-serif; */
 
-
+/* for page height detection */
+:root {
+    --doc-height: 100%;
+   }
+   
+   html,
+   body {
+    padding: 0;
+    margin: 0;
+    height: 100vh; /* fallback for Js load */
+    height: var(--doc-height);
+   }
+   
 body {
     font-family: 'IBM Plex Mono', monospace;
     /* background-color: #453333; */
@@ -21,7 +33,7 @@ body {
   }
 
 .container {
-    height: 100vh;
+    height: 100%;
     /* border: 1px solid red; */
     display: flex;
     justify-content: center;
