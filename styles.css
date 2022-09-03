@@ -5,89 +5,62 @@
 font-family: 'Roboto', sans-serif; */
 
 /* for page height detection */
+* {
+    box-sizing: border-box;
+}
+
 :root {
     --doc-height: 100%;
-   }
-   
-   html,
-   body {
+}
+
+html,
+body {
     padding: 0;
     margin: 0;
-    height: 100vh; /* fallback for Js load */
+    height: 100vh;
+    /* fallback for Js load */
     height: var(--doc-height);
-   }
-   
+}
+
 body {
     font-family: 'IBM Plex Mono', monospace;
     /* background-color: #453333; */
     background-image: url(./background.jpg);
     background-size: cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.playing {
-    /* transform: scale(1.05); */
-    border-color: #00CFBD;
-    box-shadow: 0 0 1rem #00CFBD;
-  }
+
 
 .container {
-    height: 100%;
-    /* border: 1px solid red; */
+    height: 60vh;
+    /* border: 1px solid green; */
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     flex-direction: column;
-    /* border: 1px solid green; */
 
 }
+
+/* LCD styling */
+.wrapper {
+    width: 50%;
+
+}
+.lcd-wrap {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid red; */
+
+}
+
 .description {
-    text-align:center;
+    text-align: center;
+    color: white;
     margin-bottom: 20px;
 }
-.btn {
-    font-family: 'Roboto', sans-serif;
-
-    color: black;
-    background-color: #00CFBD;
-    border: 0;
-    padding: 20px 30px;
-    margin-top: 20px;
-  transition: all .07s ease;
-}
-
-.lcd-wrap {
-    width: 50%;
-    /* border: 1px solid yellow; */
-    display: flex;
-    flex-direction: column;
-}
-
-.patches {
-    display: flex;
-    /* flex-direction: column; */
-    align-items: center;
-    /* justify-content: center; */
-    text-align: left;
-
-}
-
-.description {
-    color: white;
-}
-
-.patches {
-    font-size: 1.5rem;
-    color: black;
-    background-color: #b6c9bf;
-    padding: 0px 20px;
-    width: 100%;
-    height: 150px;
-
-
-}
-
 
 
 .lcd {
@@ -99,7 +72,7 @@ body {
 
 }
 
-.patch-num {
+.lcd__num-display {
     color: red;
     display: flex;
     align-items: center;
@@ -109,21 +82,103 @@ body {
     width: 5rem;
     font-size: 2rem;
 }
+.lcd__screen-container {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    /* justify-content: center; */
+    text-align: left;
+    font-size: 1.5rem;
+    color: black;
+    background-color: #b6c9bf;
+    padding: 0px 20px;
+    width: 100%;
+    height: 150px;
+}
+
+
+
+
+/* patch bank */
+.patch-bank h2 {
+    font-size: 1.1em;
+}
+.patch-bank {
+    /* display: inline; */
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    line-height: 1.8;
+    padding:20px;
+}
+
+/* buttons */
+.buttons {
+    display: flex;
+    gap: 0 20px;
+    margin-bottom: 20px;
+}
+
+#save {
+    background-color: #d42591;
+    color: white;
+}
+
+.btn {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    color: black;
+    background-color: #00CFBD;
+    border: 0;
+    padding: 20px 30px;
+    margin-top: 20px;
+    transition: all .07s ease;
+}
+
+.playing {
+    /* transform: scale(1.05); */
+    border-color: #00CFBD;
+    box-shadow: 0 0 1rem #00CFBD;
+}
+
+.pink {
+    /* transform: scale(1.05); */
+    border-color: #d42591;
+    box-shadow: 0 0 1rem #d42591;
+}
+.patch-bank .btn {
+    color: white;
+    background-color: #00cfbe00;
+    border: 1px solid white;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 600px) {
-    .lcd-wrap {
+    .wrapper {
         width: 90%;
 
     }
 
-    .patches {
+    .lcd__screen-container {
         font-size: 1.2rem;
         height: 100px;
 
 
     }
 
-    .patch-num {
+    .lcd__num-display {
 
         padding: 0 10px;
         /* border: 1px solid green; */

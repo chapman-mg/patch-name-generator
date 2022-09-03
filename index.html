@@ -12,21 +12,35 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="lcd-wrap">
-            <p class="description">Generate random synth patch names for inspiration</p>
-            <div class="lcd">
-                <div class="patch-num">
-                    <p class="patchnum"></p>
+    <main>
+        <div class="container">
+            <section class="lcd-wrap wrapper">
+                <p class="description">Generate random synth patch names for inspiration</p>
+                <div class="lcd">
+                    <div class="lcd__num-display">
+                        <p class="lcd__digits"></p>
+                    </div>
+                    <div class="lcd__screen-container">
+                        <p class="lcd__text"></p>
+                    </div>
                 </div>
-                <div class="patches">
-                    <p class="patchtext"></p>
+                <div class="buttons">
+                    <button id="randomize" class="btn">RANDOMIZE</button>
+                    <button id="save" class="btn">SAVE</button>
                 </div>
-            
-            </div>
-            <button id="randomize" class="btn">RANDOMIZE</button>
+            </section>
         </div>
-    </div>
+        <section class="patch-bank wrapper">
+            <h2>Saved Patches</h2>
+            <hr>
+            <ol class="patch-bank__list">
+            </ol>
+            <div class="buttons">
+                <button id="clear" class="btn">CLEAR</button>
+                <button id="copy" class="btn">COPY</button>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
