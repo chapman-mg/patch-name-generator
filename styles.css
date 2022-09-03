@@ -25,6 +25,23 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
+.category {
+    display: flex;
+    width: 100%;
+    /* flex-wrap: wrap; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0 10px;
+    margin-bottom: 20px;;
+}
+
+.btn.unselected {
+    background-color: #00CFBD;
+}
+
+.btn.selected {
+    background-color: #fd5e60;
+}
 
 .playing {
     /* transform: scale(1.05); */
@@ -47,8 +64,10 @@ body {
     margin-bottom: 20px;
 }
 .btn {
+    text-transform:uppercase;
     font-family: 'Roboto', sans-serif;
-
+    display: block;
+    flex-grow:1;
     color: black;
     background-color: #00CFBD;
     border: 0;
